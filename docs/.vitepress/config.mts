@@ -1,7 +1,11 @@
 import { defineConfig } from 'vitepress'
 
+// Repository name
+const base = '/blog/'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base,
   title: "My Awesome Project",
   description: "A VitePress Site",
   themeConfig: {
