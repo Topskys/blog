@@ -1,6 +1,6 @@
 {
   "name": "@blog",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Topskys",
   "license": "ISC",
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
