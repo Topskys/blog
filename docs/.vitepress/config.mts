@@ -8,6 +8,9 @@ export default defineConfig({
   base,
   title: "My Awesome Project",
   description: "A VitePress Site",
+  // 当设置为 true 时，VitePress 不会因为死链而导致构建失败。
+  // https://vitepress.dev/zh/reference/site-config#ignoredeadlinks
+  ignoreDeadLinks: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

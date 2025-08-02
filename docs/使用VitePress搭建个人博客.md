@@ -73,7 +73,7 @@ pnpm run docs:dev
 
 在Github上创建一个仓库，用于存放博客源码和静态文件。
 
-创建github仓库，这里不做详细赘述，大家可以参考[官方文档](https://docs.github.com/zh/repositories/creating-and-managing-repositories/quickstart-for-repositories)或者网上教程。
+创建github仓库，这里不做详细赘述，大家可以参考[官方文档](https://docs.github.com/zh/repositories/creating-and-managing-repositories/quickstart-for-repositories){target="_blank"}或者网上教程。
 
 ### 2. 启用Github Pages
 
@@ -185,7 +185,7 @@ jobs:
 
 ```
 
-该配置参考自[是柠新呀的知识库](https://xuxing409.github.io/my-blog/technology/article/building-blog-with-vitepress.html#%E9%83%A8%E7%BD%B2github-pages)，略有改动。
+该配置参考自[是柠新呀的知识库](https://xuxing409.github.io/my-blog/technology/article/building-blog-with-vitepress.html#%E9%83%A8%E7%BD%B2github-pages){target="_blank"}，略有改动。
 
 ### 4. 提交代码
 
@@ -220,9 +220,26 @@ export default {
 }
 ```
 
-再访问https://&lt;your-github-username&gt;.github.io/&lt;your-repo-name&gt;/，可以发现网页已经可以正常加载了。
+再访问https://&lt;your-github-username&gt;.github.io/&lt;your-repo-name&gt;，可以发现网页已经可以正常加载了。
 
 ![解决资源加载问题](./assets/images/1754133086386.png)
+
+
+问题2：文章存在伪链接时，打包会报错。
+
+![alt text](./assets/images/1754134617422.png)
+
+原因：VitePress在打包时会检查链接，如果存在死链接则会报错。
+
+解决：在配置文件中添加ignoreDeadLinks: true，忽略死链接。
+
+```js
+// .vitepress/config.mts
+export default {
+    ignoreDeadLinks: true,
+  // ...
+}
+```
 
 这样，你的个人博客就部署到Github Pages上了。后续只需要将编写好的博客源码提交到Github仓库中，就可以自动构建和部署了。
 
