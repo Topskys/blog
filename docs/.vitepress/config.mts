@@ -21,7 +21,11 @@ export default defineConfig({
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
+        ],
+      },
+      {
+        text: '使用VitePress搭建个人博客',
+        link: '使用VitePress搭建个人博客'
       }
     ],
 
