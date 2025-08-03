@@ -57,7 +57,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: REPOSITORY_URL }],
 
     logo: {
-      src: "./public/favicon.ico",
+      src: "/favicon.ico",
       style: { borderRadius: "50%" },
     },
     lastUpdated: {
