@@ -1,0 +1,39 @@
+import DefaultTheme from "vitepress/theme";
+import { useData, useRoute } from "vitepress";
+import giscusTalk from "vitepress-plugin-comment-with-giscus";
+import { REPOSITORY_URL } from "../custom.config";
+import "./styles/index.css";
+
+export default {
+  extends: DefaultTheme,
+
+  setup() {
+    // Get frontmatter and route
+    const { frontmatter } = useData();
+    const route = useRoute();
+
+    // giscus配置
+    giscusTalk(
+      {
+        repo: "https://github.com/Topskys/blog.git",
+        repoId: "R_kgDOPVcfjQ",
+        category: "General",
+        categoryId: "DIC_kwDOPVcfjc4CtuK8",
+        mapping: "pathname",
+        inputPosition: "bottom",
+        lang: "zh-CN",
+        loading: "lazy",
+        crossorigin: "anonymous",
+        strict: "0",
+        reactionsEnabled: "1",
+        emitMetadata: "0",
+        theme: "preferred_color_scheme",
+      },
+      {
+        frontmatter,
+        route,
+      },
+      true
+    );
+  },
+};

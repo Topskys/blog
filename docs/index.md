@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
+  name: "Lok's Blog"
+  text: "<span style='white-space: nowrap;'>记录日常学习与技术分享</span>"
   tagline: My great project tagline
   actions:
     - theme: brand
@@ -13,6 +13,10 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
+  image: 
+    src: https://avatars.githubusercontent.com/u/85061657?v=4
+    style: 
+      borderRadius: 50%
 
 features:
   - title: Feature A

@@ -1,0 +1,28 @@
+html {
+    font-family: SF Pro SC, SF Pro Text, SF Pro Icons, PingFang SC, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.VPFooter .container .message,
+.VPFooter .container .copyright {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .VPFooter {
+        padding: 10px 32px;
+    }
+
+    .VPFooter .container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .VPFooter .container .copyright {
+        padding-right: 10px;
+        border-right: 1px solid #eaecef;
+        font-size: 12px;
+    }
+}
