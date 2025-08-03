@@ -67,6 +67,16 @@ pnpm run docs:dev
 
 使用浏览器访问 http://localhost:5173，即可看到博客页面。
 
+## VitePress美化
+
+VitePress美化可以参考这几个博客：
+
+[https://vitepress.yiov.top/](https://vitepress.yiov.top/)
+[swkende-doc](https://swkende.github.io/swkende-doc/)
+[forDocs](https://tsinghua-lau.github.io/forDocs/)
+[wiki](https://rxht.github.io/wiki/)
+[xuxing409](https://xuxing409.github.io/my-blog/)
+
 ## 部署 Github Pages
 
 ### 1. 创建仓库
