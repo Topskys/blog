@@ -18,7 +18,7 @@ export default {
     // giscus配置
     giscusTalk(
       {
-        repo: "https://github.com/Topskys/blog.git",
+        repo: "Topskys/blog",
         repoId: "R_kgDOPVcfjQ",
         category: "General",
         categoryId: "DIC_kwDOPVcfjc4CtuK8",
