@@ -4,8 +4,14 @@ import DefaultTheme from "vitepress/theme";
 import { useData, useRoute } from "vitepress";
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
 import { REPOSITORY_URL } from "../custom.config";
+import Confetti from "./components/Confetti.vue";
 import DataPanel from "./components/DataPanel.vue";
 import "./styles/index.css";
+
+const components = {
+  Confetti,
+  DataPanel,
+}
 
 export default {
   extends: DefaultTheme,
@@ -41,7 +47,11 @@ export default {
   },
 
   enhanceApp({ app, router }) {
-    app.component("DataPanel", DataPanel);
+    Object.entries(components).forEach(([key,value])=>{
+      app.component(key, value)
+    })
+
+
     if (inBrowser) {
       router.onAfterRouteChanged = () => {
         busuanzi.fetch();
