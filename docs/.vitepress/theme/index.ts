@@ -1,9 +1,9 @@
-import { inBrowser } from "vitepress";
+import mediumZoom from "medium-zoom";
 import busuanzi from "busuanzi.pure.js";
 import DefaultTheme from "vitepress/theme";
-import { useData, useRoute } from "vitepress";
+import { onMounted, watch, nextTick } from "vue";
+import { inBrowser, useData, useRoute } from "vitepress";
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
-import { REPOSITORY_URL } from "../custom.config";
 import Confetti from "./components/Confetti.vue";
 import DataPanel from "./components/DataPanel.vue";
 import "./styles/index.css";
@@ -11,7 +11,7 @@ import "./styles/index.css";
 const components = {
   Confetti,
   DataPanel,
-}
+};
 
 export default {
   extends: DefaultTheme,
@@ -20,6 +20,10 @@ export default {
     // Get frontmatter and route
     const { frontmatter } = useData();
     const route = useRoute();
+
+    const initZoom = () => {
+      mediumZoom(".main img", { background: "var(--vp-c-bg)" });
+    };
 
     // giscus配置
     giscusTalk(
@@ -44,13 +48,21 @@ export default {
       },
       true
     );
+
+    onMounted(() => {
+      initZoom();
+    });
+
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    );
   },
 
   enhanceApp({ app, router }) {
-    Object.entries(components).forEach(([key,value])=>{
-      app.component(key, value)
-    })
-
+    Object.entries(components).forEach(([key, value]) => {
+      app.component(key, value);
+    });
 
     if (inBrowser) {
       router.onAfterRouteChanged = () => {

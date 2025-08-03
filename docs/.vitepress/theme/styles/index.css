@@ -31,4 +31,12 @@
             font-size: 12px;
         }
     }
+
+    .medium-zoom-overlay {
+        z-index: 30;
+    }
+
+    .medium-zoom-image {
+        z-index: 9999 !important;
+    }
 }

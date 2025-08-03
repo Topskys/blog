@@ -9,7 +9,7 @@ export default defineConfig({
   description: "这是 Lok 的个人博客，记录日常学习与技术分享。",
   ignoreDeadLinks: true,
   lastUpdated: true,
-   cleanUrls: true,
+  cleanUrls: true,
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     [
