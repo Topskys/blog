@@ -1,7 +1,10 @@
+import { inBrowser } from "vitepress";
+import busuanzi from "busuanzi.pure.js";
 import DefaultTheme from "vitepress/theme";
 import { useData, useRoute } from "vitepress";
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
 import { REPOSITORY_URL } from "../custom.config";
+import DataPanel from "./components/DataPanel.vue";
 import "./styles/index.css";
 
 export default {
@@ -35,5 +38,14 @@ export default {
       },
       true
     );
+  },
+
+  enhanceApp({ app, router }) {
+    app.component("DataPanel", DataPanel);
+    if (inBrowser) {
+      router.onAfterRouteChanged = () => {
+        busuanzi.fetch();
+      };
+    }
   },
 };

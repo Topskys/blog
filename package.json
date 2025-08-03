@@ -17,6 +17,7 @@
     "@blog/vue-demo": "workspace:^",
     "busuanzi.pure.js": "^1.0.3",
     "vitepress": "^1.6.3",
-    "vitepress-plugin-comment-with-giscus": "^1.1.15"
+    "vitepress-plugin-comment-with-giscus": "^1.1.15",
+    "vitest": "^3.2.4"
   }
 }
