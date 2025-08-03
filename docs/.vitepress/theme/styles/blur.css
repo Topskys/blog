@@ -1,0 +1,38 @@
+:root {
+
+    /* 首页导航 */
+    .VPNavBar {
+        background-color: var(--navbar-bg-color);
+        backdrop-filter: var(--navbar-blur);
+    }
+
+    @media (min-width: 768px) {
+
+        /* 文档页导航两侧 */
+        .VPNavBar:not(.home) {
+            background-color: var(--navbar-bg-color);
+            backdrop-filter: var(--navbar-blur);
+        }
+
+        /* 首页下滑后导航两侧 */
+        .VPNavBar:not(.has-sidebar):not(.home.top) {
+            background-color: var(--navbar-bg-color);
+            backdrop-filter: var(--navbar-blur);
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        /* 文档页导航中间 */
+        .VPNavBar:not(.home.top) .content-body {
+            background-color: var(--navbar-bg-color);
+            backdrop-filter: var(--navbar-blur);
+        }
+
+        /* 首页下滑后导航中间 */
+        .VPNavBar:not(.has-sidebar):not(.home.top) .content-body {
+            background-color: var(--navbar-bg-color);
+            backdrop-filter: var(--navbar-blur);
+        }
+    }
+}

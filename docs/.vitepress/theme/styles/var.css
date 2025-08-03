@@ -1,0 +1,4 @@
+:root {
+    --navbar-bg-color:rgba(255, 255, 255, 0);
+    --navbar-blur: blur(10px);
+}
