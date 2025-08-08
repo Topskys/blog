@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { add } from "@blog/utils";
-import HelloWorld from "./components/HelloWorld.vue";
+import { add } from '@blog/utils';
+import HelloWorld from './components/HelloWorld.vue';
 
 const result = add(2, 3);
-console.log("🚀 ~ result:", result)
+console.log('🚀 ~ result:', result);
 </script>
 
 <template>

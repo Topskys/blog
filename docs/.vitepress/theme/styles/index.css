@@ -2,41 +2,48 @@
 @import './blur.css';
 
 :root {
+  html {
+    font-family:
+      SF Pro SC,
+      SF Pro Text,
+      SF Pro Icons,
+      PingFang SC,
+      Helvetica Neue,
+      Helvetica,
+      Arial,
+      sans-serif;
+  }
 
-    html {
-        font-family: SF Pro SC, SF Pro Text, SF Pro Icons, PingFang SC, Helvetica Neue, Helvetica, Arial, sans-serif;
+  .VPFooter .container .message,
+  .VPFooter .container .copyright {
+    font-size: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .VPFooter {
+      padding: 10px 32px;
     }
 
-    .VPFooter .container .message,
+    .VPFooter .container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
     .VPFooter .container .copyright {
-        font-size: 12px;
+      padding-right: 10px;
+      border-right: 1px solid #eaecef;
+      font-size: 12px;
     }
+  }
 
-    @media (min-width: 768px) {
-        .VPFooter {
-            padding: 10px 32px;
-        }
+  .medium-zoom-overlay {
+    z-index: 30;
+  }
 
-        .VPFooter .container {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .VPFooter .container .copyright {
-            padding-right: 10px;
-            border-right: 1px solid #eaecef;
-            font-size: 12px;
-        }
-    }
-
-    .medium-zoom-overlay {
-        z-index: 30;
-    }
-
-    .medium-zoom-image {
-        z-index: 9999 !important;
-    }
+  .medium-zoom-image {
+    z-index: 9999 !important;
+  }
 }

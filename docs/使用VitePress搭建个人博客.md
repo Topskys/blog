@@ -227,7 +227,7 @@ git push origin main
 ```js
 // .vitepress/config.mts
 export default {
-  base: "/<your-repo-name>/", // 此处填写你的仓库名，例如：'/blog/'
+  base: '/<your-repo-name>/', // 此处填写你的仓库名，例如：'/blog/'
   // ...
 };
 ```

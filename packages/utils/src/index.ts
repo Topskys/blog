@@ -12,22 +12,19 @@ export function add(a: number, b: number): number {
 export function calculateAge(birthDate: string): number {
   const today = new Date();
   const birth = new Date(birthDate);
-  
+
   // 验证日期有效性
   if (isNaN(birth.getTime())) {
-    throw new Error("Invalid date format. Use YYYY-MM-DD");
+    throw new Error('Invalid date format. Use YYYY-MM-DD');
   }
-  
+
   let age = today.getFullYear() - birth.getFullYear();
   const monthDiff = today.getMonth() - birth.getMonth();
-  
+
   // 如果当前月份小于出生月份，或同月但日期未到生日
-  if (
-    monthDiff < 0 || 
-    (monthDiff === 0 && today.getDate() < birth.getDate())
-  ) {
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
     age--;
   }
-  
+
   return age;
 }

@@ -1,7 +1,7 @@
 /**
  * Repository URL
  */
-export const REPOSITORY_URL = "https://github.com/Topskys/blog";
+export const REPOSITORY_URL = 'https://github.com/Topskys/blog';
 
 /**
  * Base URL（Repository name）

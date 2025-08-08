@@ -13,9 +13,9 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
-  image: 
+  image:
     src: https://avatars.githubusercontent.com/u/85061657?v=4
-    style: 
+    style:
       borderRadius: 50%
 
 features:
