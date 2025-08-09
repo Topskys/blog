@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
     "lint": "eslint . --fix",
     "format": "prettier --config .prettierrc '.' --write",
     "format-watch": "onchange -d 1000 '**/*' -- prettier --config .prettierrc --write {{changed}}",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@blog/vue-demo": "workspace:^",
     "@eslint/js": "^9.32.0",
+    "@types/node": "^24.2.1",
     "busuanzi.pure.js": "^1.0.3",
     "canvas-confetti": "^1.9.3",
     "eslint": "^9.32.0",
@@ -27,7 +30,9 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-vue": "^10.4.0",
     "globals": "^16.3.0",
+    "husky": "^9.1.7",
     "jiti": "^2.5.1",
+    "lint-staged": "^16.1.5",
     "medium-zoom": "^1.1.0",
     "onchange": "^7.1.0",
     "prettier": "^3.6.2",
