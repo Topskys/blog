@@ -3,12 +3,13 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
 import pluginReact from 'eslint-plugin-react';
-import { defineConfig } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
+  globalIgnores(['dist', 'node_modules', '.next', 'build', '*.md']),
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,vue}'],
     plugins: { js },
