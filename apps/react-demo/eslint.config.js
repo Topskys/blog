@@ -20,4 +20,12 @@ export default tseslint.config([
       globals: globals.browser,
     },
   },
+  {
+    settings: {
+      react: {
+        pragma: 'React',
+        version: 'detect', // Automatically detect the React version you are using
+      },
+    },
+  },
 ]);
