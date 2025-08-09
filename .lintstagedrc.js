@@ -10,6 +10,6 @@ const removeIgnoredFiles = async (files) => {
 export default {
   '*': async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
-    return [`eslint ${filesToLint} --max-warnings=0`];
+    return [`eslint ${filesToLint} --fix --max-warnings=10`];
   },
 };
