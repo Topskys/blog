@@ -52,6 +52,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+        # 缓存全局依赖包
+        # cache: ~/.pnpm
 
       # 使用 最新的 PNPM
       # 你也可以指定为具体的版本
