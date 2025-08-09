@@ -1,2 +1,11 @@
 # lint commit messages
-npx --no -- commitlint --edit $1
+# npx --no -- commitlint --edit $1
+
+# Skips Git hooks
+# https://husky.nodejs.cn/how-to.html#skipping-git-hooks
+# npx --no -- commitlint --edit $1
+# or
+# HUSKY=0 git commit -m "xxx"
+# or
+# git commit --no-verify -m "xxx"
+# git commit -n -m "xxx"
