@@ -62,8 +62,18 @@ jobs:
           # version: 9
           run_install: false
 
+      # 缓存 node_modules
+      - uses: actions/cache@v3
+        name: Cache node_modules
+        with:
+          path: | 
+            **/node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+
         # 安装依赖
       - name: Install dependencies
+        # 如果缓存命中，则跳过安装依赖
+        if: steps.cache.outputs.cache-hit != 'true'
         run: pnpm install --frozen-lockfile
 
         # 构建项目
