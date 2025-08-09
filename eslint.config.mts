@@ -43,6 +43,13 @@ export default defineConfig([
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'vue/multi-word-component-names': 'warn',
+      'prettier/prettier': [
+        'error',
+        {
+          // 指定自定义 Prettier 命令及参数或在lint-staged 中配置，保证每次提交的代码都经过Prettier覆盖式格式化
+          command: "prettier --config .prettierrc '.' --write",
+        },
+      ],
     },
   },
 ]) as any;
