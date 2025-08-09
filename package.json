@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "lint": "eslint . --fix",
+    "lint-staged": "lint-staged",
     "format": "prettier --config .prettierrc '.' --write",
     "format-watch": "onchange -d 1000 '**/*' -- prettier --config .prettierrc --write {{changed}}",
     "commit": "git-cz",
