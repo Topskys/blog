@@ -1,10 +1,12 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import { ESLint } from 'eslint';
 import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
 import pluginReact from 'eslint-plugin-react';
 import { defineConfig } from 'eslint/config';
+
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
+import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
   {
@@ -16,6 +18,8 @@ export default defineConfig([
   tseslint.configs.recommended as any,
   pluginReact.configs.flat.recommended,
   pluginVue.configs['flat/essential'],
+  eslintPluginPrettier,
+  eslintConfigPrettier,
   {
     files: ['**/*.vue'],
     languageOptions: {
