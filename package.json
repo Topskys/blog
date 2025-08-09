@@ -10,6 +10,7 @@
     "lint": "eslint . --fix",
     "format": "prettier --config .prettierrc '.' --write",
     "format-watch": "onchange -d 1000 '**/*' -- prettier --config .prettierrc --write {{changed}}",
+    "commit": "git-cz",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
@@ -26,6 +27,8 @@
     "@types/node": "^24.2.1",
     "busuanzi.pure.js": "^1.0.3",
     "canvas-confetti": "^1.9.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-git": "^1.12.0",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",

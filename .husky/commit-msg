@@ -1,5 +1,5 @@
 # lint commit messages
-# npx --no -- commitlint --edit $1
+npx --no -- commitlint --edit $1
 
 # Skips Git hooks
 # https://husky.nodejs.cn/how-to.html#skipping-git-hooks
