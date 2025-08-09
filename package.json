@@ -20,6 +20,8 @@
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
     "@blog/vue-demo": "workspace:^",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
     "@types/node": "^24.2.1",
     "busuanzi.pure.js": "^1.0.3",
