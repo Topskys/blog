@@ -1,4 +1,7 @@
 import { defineConfig } from 'vitepress';
+import tailwindcss from '@tailwindcss/vite';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import { generateSidebar } from 'vitepress-sidebar';
 import { BASE_URL, REPOSITORY_URL } from './custom.config';
 
 // https://vitepress.dev/reference/site-config
@@ -78,5 +81,8 @@ export default defineConfig({
       message: 'Released under the MIT License.',
       copyright: `Copyright © 2019-${new Date().getFullYear()} Lok`,
     },
+  },
+  vite: {
+    plugins: [vueJsx(), tailwindcss()],
   },
 });

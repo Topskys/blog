@@ -1,5 +1,6 @@
 @import './var.css';
 @import './blur.css';
+@import './tailwind.css';
 
 :root {
   html {

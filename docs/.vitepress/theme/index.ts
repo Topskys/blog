@@ -6,11 +6,13 @@ import { inBrowser, useData, useRoute } from 'vitepress';
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import Confetti from './components/Confetti.vue';
 import DataPanel from './components/DataPanel.vue';
+import Heatmap from './components/Heatmap.tsx';
 import './styles/index.css';
 
 const components = {
   Confetti,
   DataPanel,
+  // Heatmap
 };
 
 export default {

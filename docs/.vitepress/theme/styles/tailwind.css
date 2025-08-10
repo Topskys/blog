@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+/* https://tailwindcss.com/docs/detecting-classes-in-source-files */
+@source "../components/**/*.{vue,js, jsx, ts,tsx,md}";
+@source "../../../**/*.{vue,js, jsx, ts,tsx,md}";

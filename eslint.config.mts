@@ -9,7 +9,7 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
-  globalIgnores(['dist', 'node_modules', '.next', 'build', '*.md']),
+  globalIgnores(['dist', 'node_modules', '.next', 'build', '*.md', './docs/.vitepress/cache/**']),
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,vue}'],
     plugins: { js },
