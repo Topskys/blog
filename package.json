@@ -1,5 +1,5 @@
 {
-  "name": "@blog",
+  "name": "blog",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
     "format": "prettier --config .prettierrc '.' --write",
     "format-watch": "onchange -d 1000 '**/*' -- prettier --config .prettierrc --write {{changed}}",
     "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
@@ -52,7 +53,8 @@
     "vitepress": "^1.6.3",
     "vitepress-plugin-comment-with-giscus": "^1.1.15",
     "vitepress-sidebar": "^1.33.0",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "conventional-changelog": "^7.1.1"
   },
   "dependencies": {
     "vue": "^3.5.18"
