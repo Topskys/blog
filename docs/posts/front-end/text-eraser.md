@@ -1,10 +1,10 @@
 # 多行文本擦除效果
 
-## 实现思路
+实现是一个创意的文字擦除动画效果
 
-这个实现是一个创意的文字擦除动画效果，主要思路如下：
+![alt text](../../public/images/1760535866313.png)
 
-## 核心实现原理
+## 实现原理
 
 1. **双层文本结构**：
    - 底层显示完整文本（白色）
@@ -56,78 +56,76 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    html,
-    body {
-      background-color: #000;
-      height: 100%;
-    }
-
-    .container {
-      width: 80%;
-      margin: 1em auto;
-      line-height: 2;
-      text-indent: 2em;
-      position: relative;
-      font-size: 20px;
-    }
-
-    .text {
-      color: white;
-    }
-
-    .eraser {
-      position: absolute;
-      /* 完全覆盖父元素内容 */
-      inset: 0;
-    }
-
-    /* 变量不可使用@keyframe动画，使用自定义属性解决 */
-    @property --p {
-      syntax: '<percentage>';
-      inherits: false;
-      initial-value: 0%;
-    }
-
-    .eraser-text {
-      --p: 0%;
-
-      color: transparent;
-      background: linear-gradient(to right, transparent var(--p), black calc(var(--p) + 30px));
-      animation: eraser 5s linear forwards;
-    }
-
-    @keyframes eraser {
-      to {
-        --p: 100%;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="container">
-    <p class="text"></p>
-    <p class="eraser">
-      <span class="eraser-text"></span>
-    </p>
-  </div>
-  <script>
+      html,
+      body {
+        background-color: #000;
+        height: 100%;
+      }
 
-    const text = document.querySelector('.text');
-    const eraserText = document.querySelector('.eraser-text');
-    text.innerHTML = `When using the canvas element or the Canvas API, rendering,
+      .container {
+        width: 80%;
+        margin: 1em auto;
+        line-height: 2;
+        text-indent: 2em;
+        position: relative;
+        font-size: 20px;
+      }
+
+      .text {
+        color: white;
+      }
+
+      .eraser {
+        position: absolute;
+        /* 完全覆盖父元素内容 */
+        inset: 0;
+      }
+
+      /* 变量不可使用@keyframe动画，使用自定义属性解决 */
+      @property --p {
+        syntax: '<percentage>';
+        inherits: false;
+        initial-value: 0%;
+      }
+
+      .eraser-text {
+        --p: 0%;
+
+        color: transparent;
+        background: linear-gradient(to right, transparent var(--p), black calc(var(--p) + 30px));
+        animation: eraser 5s linear forwards;
+      }
+
+      @keyframes eraser {
+        to {
+          --p: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <p class="text"></p>
+      <p class="eraser">
+        <span class="eraser-text"></span>
+      </p>
+    </div>
+    <script>
+      const text = document.querySelector('.text');
+      const eraserText = document.querySelector('.eraser-text');
+      text.innerHTML = `When using the canvas element or the Canvas API, rendering,
       animation, and user interaction usually happen on the main execution thread of a web application.
       The computation relating to canvas animations and rendering can have a significant impact on application performance.
 The OffscreenCanvas interface provides a canvas that can be rendered off screen, decoupling the DOM and the
@@ -140,10 +138,13 @@ OffscreenCanvas.convertToBlob()
 Creates a Blob object representing the image contained
 in the canvas.OffscreenCanvas.transferToImageBitmap()
  Creates an ImageBitmap object from the most recently rendered image of the OffscreenCanvas.
- See its reference for important notes on managing this ImageBitmap.`
-    eraserText.innerHTML = text.textContent;
-  </script>
-</body>
-
+ See its reference for important notes on managing this ImageBitmap.`;
+      eraserText.innerHTML = text.textContent;
+    </script>
+  </body>
 </html>
 ```
+
+## 参考文献
+
+[2.02 11/11 IiC:/ T@y.gb 多行文本擦除效果 # JavaScript # 前端开发工程师 # 编程 # 程序员 # web前端 https://v.douyin.com/K53SEIXSOeU/ 复制此链接，打开Dou音搜索，直接观看视频！](https://v.douyin.com/K53SEIXSOeU/)
